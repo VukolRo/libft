@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 17:06:36 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/12 11:51:42 by shavok           ###   ########.fr       */
+/*   Created: 2021/10/12 12:07:42 by shavok            #+#    #+#             */
+/*   Updated: 2021/10/12 14:21:17 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+int	ft_atoi(const char *str)
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char		*d;
-	unsigned char		*d_last;
-	const unsigned char	*s;
-	const unsigned char	*s_last;
+	int	ret;
+	int	m;
+	int	i;
 
-	d = dest;
-	s = src;
-	if (dest || src)
+	i = 0;
+	m = 1;
+	ret = 0;
+	while ((str[i] != '\0' && str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (d < s)
-			while (n--)
-				*d++ = *s++;
-		else
-		{
-			s_last = s + (n - 1);
-			d_last = d + (n - 1);
-			while (n--)
-				*d_last-- = *s_last--;
-		}
+		m = -1;
+		i++;
 	}
-	return (dest);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		ret = ret * 10 + (str[i] - '0');
+		i++;
+	}
+	return (ret * m);
 }

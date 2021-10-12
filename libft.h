@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:51:54 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/10 19:49:12 by shavok           ###   ########.fr       */
+/*   Updated: 2021/10/12 14:17:45 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t ft_strlcpy (char *dst, const char *src, size_t size);
 size_t ft_strlcat (char *dst, const char *src, size_t size);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+int	ft_atoi(const char *str);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: shavok <shavok@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 08:56:44 by shavok            #+#    #+#              #
-#    Updated: 2021/10/10 19:49:31 by shavok           ###   ########.fr        #
+#    Updated: 2021/10/12 12:32:04 by shavok           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,10 +18,9 @@ SRCS	=	ft_isalpha.c	ft_isdigit.c		ft_isalnum.c\
 			ft_strrchr.c	ft_strncmp.c		ft_memset.c\
 			ft_memchr.c		ft_bzero.c			ft_memcpy.c\
 			ft_memmove.c	ft_strlcpy.c		ft_strlcat.c\
-			ft_memcmp.c		
+			ft_memcmp.c		ft_strnstr.c		ft_atoi.c	
 
-#				ft_strnstr.c		ft_atoi.c\
-			ft_calloc.c		ft_strdup.c			ft_substr.c\
+#			ft_calloc.c		ft_strdup.c			ft_substr.c\
 			ft_strjoin.c	ft_strtrim.c		ft_split.c\
 			ft_itoa.c		ft_strmapi.c		ft_striteri.c\
 			ft_putchar_fd.c	ft_putstr_fd.c		ft_putendl_fd.c\
