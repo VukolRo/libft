@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:51:54 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/12 14:17:45 by shavok           ###   ########.fr       */
+/*   Updated: 2021/10/12 15:42:44 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ size_t ft_strlcat (char *dst, const char *src, size_t size);
 int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int	ft_atoi(const char *str);
+char	*ft_strdup(char *src);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
