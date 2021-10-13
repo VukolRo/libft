@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:51:54 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/12 15:42:44 by shavok           ###   ########.fr       */
+/*   Updated: 2021/10/13 12:45:58 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ int	ft_atoi(const char *str);
 char	*ft_strdup(char *src);
 void	*ft_calloc(size_t nmemb, size_t size);
 
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 #endif

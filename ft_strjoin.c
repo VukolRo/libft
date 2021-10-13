@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 19:57:28 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/13 17:26:08 by shavok           ###   ########.fr       */
+/*   Created: 2021/10/13 12:45:42 by shavok            #+#    #+#             */
+/*   Updated: 2021/10/13 19:23:50 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *str, int c)
+#include "libft.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
 
 {
-	int		i;
-	char	*p;
+	char	*buf;
+	int		len_1;
+	int		len_2;
 
-	i = 0;
-	p = (void *)0;
-	while (str[i] != 0)
+	if (!s1 || !s2)
+		return (NULL);
+	else
 	{
-		if (str[i] == (unsigned char)c)
+		len_1 = ft_strlen(s1);
+		len_2 = ft_strlen(s2);
+		buf = (char *)ft_calloc((len_1 + len_2 + 1), sizeof(char));
+		if (buf)
 		{
-			p = (char *)&str[i];
+			ft_strlcat(&buf[0], s1, (len_1 + 1));
+			ft_strlcat(&buf[len_1], s2, (len_2 + 1));
 		}
-		i++;
+		return (buf);
 	}
-	if (c == '\0')
-	{
-		p = (char *)&str[i];
-	}
-	return (p);
 }
