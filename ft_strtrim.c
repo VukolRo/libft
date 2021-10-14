@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 10:57:56 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/14 14:58:25 by shavok           ###   ########.fr       */
+/*   Created: 2021/10/14 10:45:10 by shavok            #+#    #+#             */
+/*   Updated: 2021/10/14 13:12:37 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
+#include "libft.h"
+
+char	*ft_strtrim(char const *s1, char const *set)
 
 {
-	int	i;
+	char	*buf;
+	int		len;
 
-	i = 0;
-	while (str[i] != '\0' )
-		i++;
-	return (i);
+	if (!s1 || !set)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		++s1;
+	len = ft_strlen(s1);
+	while (len && ft_strchr(set, *(s1 + len)))
+		--len;
+	buf = ft_substr(s1, 0, len + 1);
+	return (buf);
 }
