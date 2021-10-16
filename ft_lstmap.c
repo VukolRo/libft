@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 17:06:36 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/16 14:05:04 by shavok           ###   ########.fr       */
+/*   Created: 2021/10/16 13:47:16 by shavok            #+#    #+#             */
+/*   Updated: 2021/10/16 16:30:13 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char		*d;
-	unsigned char		*d_last;
-	const unsigned char	*s;
-	const unsigned char	*s_last;
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
-	d = dest;
-	s = src;
-	if (dest || src)
+{
+	t_list	*ret;
+	t_list	*new_el;
+
+	ret = (t_list *)0;
+	while (lst)
 	{
-		if (d < s)
-			while (n--)
-				*d++ = *s++;
-		else
+		new_el = ft_lstnew((*f)(lst->content));
+		if (!new_el)
 		{
-			s_last = s + (n - 1);
-			d_last = d + (n - 1);
-			while (n--)
-				*d_last-- = *s_last--;
+			ft_lstclear(&ret, del);
+			break ;
 		}
+		lst = lst->next;
+		ft_lstadd_back(&ret, new_el);
 	}
-	return (dest);
+	return (ret);
 }
