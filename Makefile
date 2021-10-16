@@ -6,7 +6,7 @@
 #    By: shavok <shavok@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 08:56:44 by shavok            #+#    #+#              #
-#    Updated: 2021/10/16 17:33:20 by shavok           ###   ########.fr        #
+#    Updated: 2021/10/16 18:22:07 by shavok           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,10 +23,7 @@ SRCS	=	ft_isalpha.c	ft_isdigit.c		ft_isalnum.c\
 			ft_strjoin.c	ft_strtrim.c		ft_split.c\
 			ft_itoa.c		ft_strmapi.c		ft_striteri.c\
 			ft_putchar_fd.c	ft_putstr_fd.c		ft_putendl_fd.c\
-			ft_putnbr_fd.c	ft_lstnew.c			ft_lstadd_front.c\
-			ft_lstsize.c	ft_lstlast.c		ft_lstadd_back.c\
-			ft_lstdelone.c	ft_lstclear.c		ft_lstiter.c\
-			ft_lstmap.c	
+			ft_putnbr_fd.c
 
 SRCS_B	=	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c\
 			ft_lstlast.c	ft_lstadd_back.c	ft_lstdelone.c\
@@ -44,13 +41,14 @@ CFLAGS	=	-Wall -Wextra -Werror -I$(HEADER)
 all		:	$(NAME)	
 
 $(NAME)	:	$(OBJ)	$(HEADER)
-	ar rcs $(NAME) $?
+			ar rc $(NAME) $?
+			ranlib $(NAME)
 
 %.o		:	%.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus	:
-	@make ${OBJ}=:"$(OBJ_B)" all
+bonus	:	$(OBJ_B) $(HEADER)
+			ar rc $(NAME) $?
 
 clean	:
 	@rm -f	$(OBJ) $(OBJ_B)
