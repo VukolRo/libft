@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:14:32 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/15 12:22:55 by shavok           ###   ########.fr       */
+/*   Updated: 2021/10/18 13:04:53 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ static char	**arr_allocate(char **ret, char const *s, int w_count, char c)
 		{
 			while ((--j) >= 0)
 				free(ret[j]);
+			free(ret);
 			return (NULL);
 		}
 		i += w_len;
@@ -73,7 +74,7 @@ char	**ft_split(char const *s, char c)
 		ret = (char **)ft_calloc((w_count + 1), sizeof(char *));
 		if (ret)
 		{
-			arr_allocate(ret, s, w_count, c);
+			ret = arr_allocate(ret, s, w_count, c);
 		}
 	}
 	return (ret);

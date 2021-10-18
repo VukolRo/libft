@@ -6,7 +6,7 @@
 #    By: shavok <shavok@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 08:56:44 by shavok            #+#    #+#              #
-#    Updated: 2021/10/16 18:57:44 by shavok           ###   ########.fr        #
+#    Updated: 2021/10/17 15:15:22 by shavok           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,8 @@ $(NAME)	:	$(OBJ)	$(HEADER)
 %.o		:	%.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus	:	$(OBJ_B) $(HEADER)
-			ar rc $(NAME) $?
+bonus	:	
+	@make OBJ='$(OBJ_B)' all
 
 clean	:
 	@rm -f	$(OBJ) $(OBJ_B)

@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 11:28:12 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/12 11:51:58 by shavok           ###   ########.fr       */
+/*   Updated: 2021/10/18 13:15:15 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		while (*haystack && len >= n_len)
 		{
 			if (*haystack == *needle
-				&& ft_strncmp((haystack), needle, ft_strlen(needle)) == 0)
+				&& ft_strncmp(haystack, needle, n_len) == 0)
 				found = (char *)haystack;
 			haystack++;
 			len--;
-			if (found != NULL)
+			if (found)
 				break ;
 		}
 	}
