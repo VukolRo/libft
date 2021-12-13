@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin_v2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/13 12:45:42 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/13 19:23:50 by shavok           ###   ########.fr       */
+/*   Created: 2021/10/26 16:46:41 by shavok            #+#    #+#             */
+/*   Updated: 2021/10/26 17:10:45 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,25 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*buf;
 	int		len_1;
 	int		len_2;
+	int		i;
 
 	if (!s1 || !s2)
 		return (NULL);
-	else
+	len_1 = ft_strlen(s1);
+	len_2 = ft_strlen(s2);
+	buf = (char *)malloc((len_1 + len_2 + 1) * sizeof(char));
+	if (buf)
 	{
-		len_1 = ft_strlen(s1);
-		len_2 = ft_strlen(s2);
-		buf = (char *)ft_calloc((len_1 + len_2 + 1), sizeof(char));
-		if (buf)
+		i = -1;
+		while (s1[++i])
+			buf[i] = s1[i];
+		i = -1;
+		while (s2[++i])
 		{
-			ft_strlcat(&buf[0], s1, (len_1 + 1));
-			ft_strlcat(&buf[len_1], s2, (len_2 + 1));
+			buf[len_1] = s2[i];
+			len_1++;
 		}
-		return (buf);
+		buf[len_1] = '\0';
 	}
+	return (buf);
 }

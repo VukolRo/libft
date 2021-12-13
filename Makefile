@@ -6,7 +6,7 @@
 #    By: shavok <shavok@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 08:56:44 by shavok            #+#    #+#              #
-#    Updated: 2021/10/17 15:15:22 by shavok           ###   ########.fr        #
+#    Updated: 2021/10/20 17:20:53 by shavok           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,12 +47,12 @@ $(NAME)	:	$(OBJ)	$(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 bonus	:	
-	@make OBJ='$(OBJ_B)' all
+	make OBJ='$(OBJ_B)' all
 
 clean	:
-	@rm -f	$(OBJ) $(OBJ_B)
+	@rm -f $(OBJ) $(OBJ_B)
 
 fclean	:	clean
-	@$(RM) $(NAME)
+	@rm -f $(NAME)
 
 re		:	fclean all
