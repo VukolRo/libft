@@ -6,12 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 12:07:42 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/12 14:21:17 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:22 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(const char *str)
+#include "libft.h"
 
+int	ft_atoi(const char *str)
 {
 	int	ret;
 	int	m;

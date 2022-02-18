@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 10:45:10 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/14 13:12:37 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:28:04 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
-
 {
 	char	*buf;
 	int		len;

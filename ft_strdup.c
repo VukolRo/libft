@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 15:14:12 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/26 17:19:35 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/16 21:09:01 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ char	*ft_strdup(char *src)
 	if (dup == NULL)
 		return (NULL);
 	else
+	{
 		while (i < ft_strlen(src))
 		{
 			dup[i] = src[i];
 			i++;
 		}
-		dup[i] = '\0';
+	}
+	dup[i] = '\0';
 	return (dup);
 }

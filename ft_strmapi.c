@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 16:37:53 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/15 16:55:00 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:40 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
-
 {
 	char	*str;
 	int		i;

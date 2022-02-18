@@ -6,12 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 10:49:37 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/08 15:36:24 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:12 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int a)
+#include "libft.h"
 
+int	ft_isprint(int a)
 {
 	if (a >= 32 && a <= 126)
 	{

@@ -6,7 +6,7 @@
 #    By: shavok <shavok@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/07 08:56:44 by shavok            #+#    #+#              #
-#    Updated: 2021/10/20 17:20:53 by shavok           ###   ########.fr        #
+#    Updated: 2022/02/18 16:30:53 by shavok           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS	=	ft_isalpha.c	ft_isdigit.c		ft_isalnum.c\
 			ft_strjoin.c	ft_strtrim.c		ft_split.c\
 			ft_itoa.c		ft_strmapi.c		ft_striteri.c\
 			ft_putchar_fd.c	ft_putstr_fd.c		ft_putendl_fd.c\
-			ft_putnbr_fd.c
+			ft_putnbr_fd.c	get_next_line.c
 
 SRCS_B	=	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c\
 			ft_lstlast.c	ft_lstadd_back.c	ft_lstdelone.c\
@@ -34,7 +34,7 @@ OBJ		=	$(SRCS:%.c=%.o)
 OBJ_B	=	$(SRCS_B:%.c=%.o)
 
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror -I$(HEADER)
+CFLAGS	=	-Wall -Wextra -Werror
 
 .PHONY	:	all clean fclean re bonus
 
@@ -44,15 +44,15 @@ $(NAME)	:	$(OBJ)	$(HEADER)
 			ar rc $(NAME) $?
 
 %.o		:	%.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
+			$(CC) $(CFLAGS) -c $< -o $@
 
 bonus	:	
-	make OBJ='$(OBJ_B)' all
+			make OBJ='$(OBJ_B)' all
 
 clean	:
-	@rm -f $(OBJ) $(OBJ_B)
+			@rm -f $(OBJ) $(OBJ_B)
 
 fclean	:	clean
-	@rm -f $(NAME)
+			@rm -f $(NAME)
 
 re		:	fclean all

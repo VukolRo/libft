@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:08:00 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/13 13:24:38 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:36 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
-
 {
 	size_t	d_len;
 	size_t	s_len;

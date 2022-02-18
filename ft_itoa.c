@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 12:24:42 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/15 16:36:04 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:35 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	count_rank(long long int m)
-
 {
 	int			count;
 
@@ -27,7 +26,6 @@ static int	count_rank(long long int m)
 }
 
 char	*ft_itoa(int n)
-
 {
 	char			*ret;
 	int				count;

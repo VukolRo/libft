@@ -6,12 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:54:32 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/08 15:36:03 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:18 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int a)
+#include "libft.h"
 
+int	ft_isascii(int a)
 {
 	if (a >= 0 && a <= 127)
 	{

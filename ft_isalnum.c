@@ -6,12 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 09:09:19 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/08 15:35:50 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:26 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int a)
+#include "libft.h"
 
+int	ft_isalnum(int a)
 {
 	if (a >= 'a' && a <= 'z')
 	{

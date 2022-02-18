@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 11:28:12 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/18 13:15:15 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:51 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
-
 {
 	char	*found;
 	size_t	n_len;

@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 18:01:09 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/15 19:16:28 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:13 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
-
 {
 	if (fd > 0)
 	{

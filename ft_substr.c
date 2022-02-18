@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:47:23 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/19 12:39:52 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:28:06 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
-
 {
 	char	*buf;
 	int		m_len;

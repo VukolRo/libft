@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 13:14:32 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/18 13:04:53 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:28 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	words_count(char const *s, char c)
-
 {
 	int	count;
 	int	i;
@@ -32,7 +31,6 @@ static int	words_count(char const *s, char c)
 }
 
 static char	**arr_allocate(char **ret, char const *s, int w_count, char c)
-
 {
 	int	w_len;
 	int	j;
@@ -62,7 +60,6 @@ static char	**arr_allocate(char **ret, char const *s, int w_count, char c)
 }
 
 char	**ft_split(char const *s, char c)
-
 {
 	char	**ret;
 	int		w_count;

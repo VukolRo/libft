@@ -6,7 +6,7 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 18:51:54 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/16 17:55:52 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:20:08 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,20 @@
 # include <stdlib.h>
 # include <unistd.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# elif BUFFER_SIZE < 1
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
+
+char	*get_next_line(int fd);
 
 int		ft_isalnum(int a);
 int		ft_isalpha(int a);

@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 12:32:21 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/16 16:29:18 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:47 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 t_list	*ft_lstlast(t_list *lst)
-
 {
 	if (!lst)
 		return (NULL);

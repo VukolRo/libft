@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 17:24:47 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/15 17:59:19 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:11 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
-
 {
 	if (fd > 0)
 	{

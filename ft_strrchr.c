@@ -6,12 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 19:57:28 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/13 17:26:08 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:56 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strrchr(const char *str, int c)
+#include "libft.h"
 
+char	*ft_strrchr(const char *str, int c)
 {
 	int		i;
 	char	*p;

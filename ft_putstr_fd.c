@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 17:18:54 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/15 17:58:31 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:16 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
-
 {
 	int	i;
 

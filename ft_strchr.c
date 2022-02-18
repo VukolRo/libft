@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 17:14:10 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/13 17:01:53 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:27:30 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
-
 {
 	int		i;
 	char	*p;

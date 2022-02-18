@@ -6,14 +6,13 @@
 /*   By: shavok <shavok@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/16 13:05:29 by shavok            #+#    #+#             */
-/*   Updated: 2021/10/16 16:09:25 by shavok           ###   ########.fr       */
+/*   Updated: 2022/02/18 16:26:42 by shavok           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
-
 {
 	t_list	*temp;
 
